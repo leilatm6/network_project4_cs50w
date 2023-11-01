@@ -1,0 +1,96 @@
+
+  .custom-container {
+    border: 1px solid #ccc; /* 1px border with a color of #ccc (light gray) */
+    padding: 20px; /* Add some padding for spacing inside the container */
+  }
+
+
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+
+  .paginationlink{
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+  }
+
+
+  .disablelink {
+      color: gray; 
+      pointer-events: none; 
+      text-decoration: none; 
+  
+}
+
+/* styles.css */
+
+/* Style the posts container */
+#posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style individual posts */
+.post {
+  width: 100%;
+  max-width: 600px;
+  margin: 5px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style post headers (username and date) */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.post-date {
+  
+  font-size: 12px;
+}
+
+/* Style post content */
+.post-content {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* Style post footer (like count and like button) */
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-count {
+  color: #888;
+}
+
+.like-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.like-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+

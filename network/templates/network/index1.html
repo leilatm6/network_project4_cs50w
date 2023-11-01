@@ -1,0 +1,40 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+
+{%block body%}
+
+<div id="posts-container">
+    {% for post in posts %}
+    <div class="post rounded-2">
+        <div class="post-header">
+            <span class="username">{{ post.user.username }}</span>
+            <span class="post-date text-muted">{{ post.timestamp }}</span>
+        </div>
+        <div class="post-content">
+            {{ post.text }}
+        </div>
+        <div class="post-footer">
+            <span class="like-count">{{ post.likes }} Likes</span>
+            <button class="like-button" data-post-id="{{ post.id }}">Like</button>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+<div class="pagination custom-pagination">
+    <span class="step-links">
+        {% if posts.has_previous %}
+        <a href="?page=1">&laquo; first</a>
+        <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+        <span class="current-page">
+            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+        </span>
+        {% if posts.has_next %}
+        <a href="?page={{ posts.next_page_number }}">next</a>
+        <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}
